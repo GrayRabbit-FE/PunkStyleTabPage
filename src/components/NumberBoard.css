@@ -1,0 +1,173 @@
+.container {
+    position: relative;
+    margin-top: 10vh;
+    text-align: center;
+    display: flex;
+    transform: rotateX(0deg) rotateY(25deg) rotateZ(0deg) skewX(-5deg);
+}
+
+.preserve {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.char {
+    font-size: 8vmax;
+    font-weight: 100;
+    position: relative;
+    top: 1vw;
+    left: -2vw;
+    color: rgba(30, 30, 30, 0.5);
+}
+
+.char::before {
+    position: absolute;
+    content: attr(data-before);
+    transform: translateZ(1vw);
+    color: #96e6a1;
+    animation: upAndDown 5s infinite;
+}
+
+.number {
+    position: relative;
+    width: 5vmax;
+    height: 12vmax;
+    display: inline-block;
+    margin: 3vw 3vw 0 0;
+}
+
+.number .number-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3vmax;
+    height: 3px;
+    background: rgba(30, 30, 30, 0);
+}
+
+.number .number-line:nth-child(1) {
+    transform: translateY(-0.2vw);
+}
+
+.number .number-line:nth-child(2) {
+    top: 3.2vmax;
+}
+
+.number .number-line:nth-child(3) {
+    transform: rotate(180deg) translateY(-0.2vw);
+    top: 6.4vmax;
+}
+
+.number .number-line:nth-child(4) {
+    transform: rotate(90deg) translateY(0.2vw);
+    transform-origin: 0 center;
+}
+
+.number .number-line:nth-child(5) {
+    transform: rotate(-90deg) translateY(0.2vw);
+    transform-origin: 100% center;
+}
+
+.number .number-line:nth-child(6) {
+    top: 3.4vmax;
+    transform: rotate(90deg) translateY(0.2vw);
+    transform-origin: 0 center;
+}
+
+.number .number-line:nth-child(7) {
+    top: 3.4vmax;
+    transform: rotate(-90deg) translateY(0.2vw);
+    transform-origin: 100% center;
+}
+
+.number .number-line::before,
+.number .number-line::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: #5ee7df;
+    box-shadow: 0 0 5px #96e6a1, 0 0 3px #96e6a1, 0 0 9px #d4fc79, 0 0 11px #d4fc79;
+}
+
+.number .number-line::before {
+    left: 0;
+    right: 50%;
+    transition: all 0.8s ease-in;
+}
+
+.number .number-line::after {
+    left: 50%;
+    right: 0;
+    transition: all 0.8s ease-out;
+}
+
+.number .translate::before,
+.number .translate::after {
+    transform: translateZ(1vw);
+}
+
+.number[data-digit="1"] .number-line:nth-child(1)::before,
+.number[data-digit="1"] .number-line:nth-child(1)::after,
+.number[data-digit="1"] .number-line:nth-child(2)::before,
+.number[data-digit="1"] .number-line:nth-child(2)::after,
+.number[data-digit="1"] .number-line:nth-child(3)::before,
+.number[data-digit="1"] .number-line:nth-child(3)::after,
+.number[data-digit="1"] .number-line:nth-child(4)::before,
+.number[data-digit="1"] .number-line:nth-child(4)::after,
+.number[data-digit="1"] .number-line:nth-child(6)::before,
+.number[data-digit="1"] .number-line:nth-child(6)::after,
+.number[data-digit="2"] .number-line:nth-child(4)::before,
+.number[data-digit="2"] .number-line:nth-child(4)::after,
+.number[data-digit="2"] .number-line:nth-child(7)::before,
+.number[data-digit="2"] .number-line:nth-child(7)::after,
+.number[data-digit="3"] .number-line:nth-child(4)::before,
+.number[data-digit="3"] .number-line:nth-child(4)::after,
+.number[data-digit="3"] .number-line:nth-child(6)::before,
+.number[data-digit="3"] .number-line:nth-child(6)::after,
+.number[data-digit="4"] .number-line:nth-child(1)::before,
+.number[data-digit="4"] .number-line:nth-child(1)::after,
+.number[data-digit="4"] .number-line:nth-child(3)::before,
+.number[data-digit="4"] .number-line:nth-child(3)::after,
+.number[data-digit="4"] .number-line:nth-child(6)::before,
+.number[data-digit="4"] .number-line:nth-child(6)::after,
+.number[data-digit="5"] .number-line:nth-child(5)::before,
+.number[data-digit="5"] .number-line:nth-child(5)::after,
+.number[data-digit="5"] .number-line:nth-child(6)::before,
+.number[data-digit="5"] .number-line:nth-child(6)::after,
+.number[data-digit="6"] .number-line:nth-child(5)::before,
+.number[data-digit="6"] .number-line:nth-child(5)::after,
+.number[data-digit="7"] .number-line:nth-child(2)::before,
+.number[data-digit="7"] .number-line:nth-child(2)::after,
+.number[data-digit="7"] .number-line:nth-child(3)::before,
+.number[data-digit="7"] .number-line:nth-child(3)::after,
+.number[data-digit="7"] .number-line:nth-child(4)::before,
+.number[data-digit="7"] .number-line:nth-child(4)::after,
+.number[data-digit="7"] .number-line:nth-child(6)::before,
+.number[data-digit="7"] .number-line:nth-child(6)::after,
+.number[data-digit="9"] .number-line:nth-child(6)::before,
+.number[data-digit="9"] .number-line:nth-child(6)::after,
+.number[data-digit="0"] .number-line:nth-child(2)::before,
+.number[data-digit="0"] .number-line:nth-child(2)::after {
+    transform: translateZ(0px);
+    background: rgba(30, 30, 30, 0.1);
+    box-shadow: 0 0 0 #4a8080;
+}
+
+@keyframes upAndDown {
+    from {
+        transform: translateZ(0);
+        color: rgba(30, 30, 30, 0.1);
+        box-shadow: 0 0 0 #303030;
+    }
+    50% {
+        transform: translateZ(1vw);
+        color: #96e6a1;
+        text-shadow: 0 0 5px #96e6a1, 0 0 10px #96e6a1, 0 0 15px #96e6a1;
+    }
+    to {
+        transform: translateZ(0);
+        color: rgba(30, 30, 30, 0.1);
+        box-shadow: 0 0 0 #303030;
+    }
+}
