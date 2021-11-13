@@ -1,0 +1,37 @@
+{
+    "name": "punkstyletabpage",
+    "version": "1.0.0",
+    "description": "a punk stype web tabpage.",
+    "main": "index.html",
+    "dependencies": {
+        "react-dom": "^17.0.2",
+        "react": "^17.0.2",
+        "react-scripts": "^4.0.3",
+        "web-vitals": "^1.1.2"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "start": "react-scripts start"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/GrayRabbit-FE/PunkStyleTabPage.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/GrayRabbit-FE/PunkStyleTabPage/issues"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}
