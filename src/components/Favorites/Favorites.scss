@@ -1,0 +1,38 @@
+#Favorites {
+    .favorites-head-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 4vmax;
+        height: 4vmax;
+        background-color: aqua;
+    }
+    .plus-icon {
+        position: relative;
+        width: 3px;
+        height: 3px;
+        background-color: red;
+        &::after,
+        &::before {
+            top: -1.5vmax;
+            opacity: 0.6;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            width: 0.5vmax;
+            height: 3vmax;
+            background-color: #F3F3F3;
+            border-radius: 2.25vmax;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 0.5vmax;
+            height: 3vmax;
+            background-color: #F3F3F3;
+            border-radius: 2.25vmax;
+            transform: rotateZ(90deg);
+        }
+    }
+}

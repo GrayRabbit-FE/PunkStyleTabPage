@@ -1,6 +1,6 @@
-import NumberContainer from "../../components/NumberBoard";
+import NumberBoard from "../../components/NumberBoard/NumberBoard";
 import { useState, useEffect, useRef } from "react";
-import './MainPage.css';
+import './MainPage.scss';
 function MainPage() {
   let [str, setStr] = useState(new Date().toLocaleTimeString());
   let [sc, setSc] = useState("");
@@ -25,8 +25,8 @@ function MainPage() {
   });
 
   return (
-    <div id="app">
-      <NumberContainer str={str}></NumberContainer>
+    <div id="mainpage">
+      <NumberBoard str={str}></NumberBoard>
       <div id="input-container">
         <input
           id="content-input"
@@ -39,7 +39,7 @@ function MainPage() {
         </div>
       </div>
       <div id="foot">
-        <p>GitHub:<a href="https://github.com/GrayRabbit-FE"> 求🌟🌟🌟 </a></p> 
+        <p>GitHub:<a href="https://github.com/GrayRabbit-FE/PunkStyleTabPage"> 求🌟🌟🌟 </a></p> 
         <p>By GrayRabbit@HIT</p> 
       </div>
     </div>
