@@ -10,7 +10,7 @@
     align-items: center;
     #input-container {
         display: flex;
-        height: 5vh;
+        height: 15vh;
     }
     #content-input,
     #content-input:focus,
@@ -33,9 +33,13 @@
     #content-input::placeholder,
     #sbtn,
     #content-input {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: #d4fc79;
         text-align: center;
         font-size: 2.5vmin;
+        min-height: 30px;
     }
     #foot {
         position: absolute;

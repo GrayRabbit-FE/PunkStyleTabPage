@@ -1,4 +1,5 @@
 import NumberBoard from "../../components/NumberBoard/NumberBoard";
+import Favorites from '../../components/Favorites/Favorites';
 import { useState, useEffect, useRef } from "react";
 import './MainPage.scss';
 function MainPage() {
@@ -38,9 +39,10 @@ function MainPage() {
           搜索
         </div>
       </div>
+     <Favorites></Favorites>
       <div id="foot">
-        <p>GitHub:<a href="https://github.com/GrayRabbit-FE/PunkStyleTabPage"> 求🌟🌟🌟 </a></p> 
-        <p>By GrayRabbit@HIT</p> 
+        <p>GitHub:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://github.com/GrayRabbit-FE/PunkStyleTabPage" target="_blank"> 👉求 Star ❤️👈</a></p> 
+        <p>AboutMe: &nbsp;&nbsp;GrayRabbit@HIT</p> 
       </div>
     </div>
   );
