@@ -1,5 +1,5 @@
 import MainPage from "./containers/MainPage/MainPage";
-import "../src/App.css";
+import "../src/App.scss";
 function App() {
   return (
     <>
