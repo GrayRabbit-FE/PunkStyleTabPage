@@ -8,7 +8,7 @@
 
 - **搜索**：可以通过输入关键词 ⌨️ 点击搜索 🔍来进行内容的检索。
 
-  （搜索引擎目前使用的Bing，后续将使用用户默认的搜索引擎）![image-20211116114004739](.\README.assets\image-20211116114004739.png)
+  （搜索引擎目前使用的Bing，后续将使用用户默认的搜索引擎）![image-20211116114004739](README.assets\image-20211116114004739.png)
 
   <center style="font-size:14px;color:#C0C0C0;text-decoration:underline">搜索步骤</center> 
 
