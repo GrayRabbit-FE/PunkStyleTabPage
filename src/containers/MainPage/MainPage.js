@@ -41,8 +41,7 @@ function MainPage() {
       </div>
      <Favorites></Favorites>
       <div id="foot">
-        <p>GitHub:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://github.com/GrayRabbit-FE/PunkStyleTabPage" target="_blank"> 👉求 Star ❤️👈</a></p> 
-        <p>AboutMe: &nbsp;&nbsp;GrayRabbit@HIT</p> 
+        GrayRabbit@HIT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/GrayRabbit-FE/PunkStyleTabPage" target="_blank"> 👉求 Star ❤️👈</a>
       </div>
     </div>
   );

@@ -2,10 +2,11 @@ $headSize:45px;
 @use "sass:math";
 #Favorites {
     display: flex;
-    width: 60vw;
+    width: 80vw;
     justify-content: space-around;
     height: 10vh;
-    margin-top: 15vh;
+    margin-top: 15vmin;
+    flex-wrap: wrap;
     .head {
         display: flex;
         align-items: center;
@@ -26,8 +27,8 @@ $headSize:45px;
     .favorite-item {
         display: flex;
         position: relative;
-        width: 90px;
-        height: 90px;
+        width: 85px;
+        height: 80px;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -83,7 +84,7 @@ $headSize:45px;
     .mask {
         position: absolute;
         top: -10vh;
-        left: -12vw;
+        left: -15vmax;
         display: flex;
         align-items: center;
         justify-content: center;

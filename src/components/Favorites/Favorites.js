@@ -1,4 +1,4 @@
-import { useState, usingIn } from 'react'
+import { useState, useEffect } from 'react'
 import ico from "../../assects/favicon.ico"
 import del from "../../assects/del.png"
 import './Favorites.scss'
@@ -9,6 +9,14 @@ import './Favorites.scss'
 function InfoGeter(props) {
     let [url, setUrl] = useState("");
     let [name, setName] = useState("");
+    useEffect(
+        () => {
+            if (props.showModel === false) {
+                setName("");
+                setUrl("");
+            }
+        }
+    )
     return (
         props.showModel &&
         <div className="mask">
@@ -25,10 +33,14 @@ function InfoGeter(props) {
                 />
                 <div className="button-container">
                     <button onClick={() => {
+                        if (/^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\*\+,;=.]+$/.test(url) === false) {
+                            alert("请输入正确格式网址");
+                            return;
+                        }
                         let Data = (JSON.parse(window.localStorage.getItem("gr-favorite")) || []);
                         Data.push({
-                            name,
-                            weburl: url.startsWith("https://") && url.startsWith("http://") ? url : "https://" + url
+                            name: name || "default",
+                            weburl: url.startsWith("https://") || url.startsWith("http://") ? url : "https://" + url
                         });
                         window.localStorage.setItem("gr-favorite", JSON.stringify(Data));
                         props.callback();
@@ -72,7 +84,6 @@ function FavoriteItemHead(props) {
                     showModel={showModel}
                     setShowModel={setShowModel}
                     callback={() => {
-                        console.log(props);
                         props.setFavorites(JSON.parse(window.localStorage.getItem("gr-favorite")));
                     }}
                 >
