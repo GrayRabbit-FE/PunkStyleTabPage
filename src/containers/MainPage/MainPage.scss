@@ -1,7 +1,6 @@
 #mainpage {
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
     background-size: 100% 100%;
     overflow: hidden;
     user-select: none;
@@ -57,5 +56,40 @@
         position: absolute;
         bottom: 1vh;
         color: #d4fc79;
+    }
+    #top-bar {
+        right: 15px;
+        top: 15px;
+        text-align: center;
+        position: absolute;
+        b {
+            color: #d4fc79;
+        }
+        display: flex;
+        flex-direction: column;
+    }
+    #github {
+        width: 60px;
+        height: 60px;
+        transition: 0.2s ease-out;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    input[type="color"] {
+        appearance: none;
+        border: 0;
+        margin: 5px;
+    }
+    #foot-bar {
+        right: 15px;
+        bottom: 5px;
+        text-align: center;
+        position: absolute;
+        b {
+            color: #d4fc79;
+        }
+        display: flex;
+        flex-direction: column;
     }
 }
