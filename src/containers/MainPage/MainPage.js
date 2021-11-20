@@ -84,7 +84,7 @@ function MainPage() {
         <input
           id="content-input"
           placeholder="请输入搜索内容"
-          onKeyPress={handleInput}
+          onKeyUp={handleInput}
           type="text"
         />
         <div onClick={handleButton} id="sbtn">
