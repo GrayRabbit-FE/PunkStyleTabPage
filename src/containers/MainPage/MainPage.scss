@@ -50,7 +50,7 @@
     #sbtn {
         border-radius: 0 2.5vmin 2.5vmin 0;
         width: 15vmin;
-        color: #96e6a1;
+        color: #d4fc79;
     }
     #foot {
         position: absolute;
@@ -69,8 +69,10 @@
         flex-direction: column;
     }
     #github {
-        width: 60px;
-        height: 60px;
+        width: 4vw;
+        height: 4vw;
+        min-width: 40px;
+        min-height: 40px;
         transition: 0.2s ease-out;
         &:hover {
             transform: scale(1.1);
@@ -91,5 +93,11 @@
         }
         display: flex;
         flex-direction: column;
+        button {
+            border: 1px;
+            background: rgba(96, 114, 103, 0.6);
+            color: #d4fc79;
+            border-radius: 10px;
+        }
     }
 }

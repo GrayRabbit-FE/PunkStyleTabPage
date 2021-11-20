@@ -83,7 +83,7 @@ $headSize:45px;
     .mask {
         position: absolute;
         top: -10vh;
-        left: -15vmax;
+        left: -12vmax;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -99,7 +99,7 @@ $headSize:45px;
         width: 30vmax;
         height: 35vmin;
         border-radius: 3vw;
-        background-color: rgba($color: #222222, $alpha: 1);
+        background-color: rgba($color: #222222, $alpha: 0.2);
     }
     .button-container {
         width: 25vmax;
