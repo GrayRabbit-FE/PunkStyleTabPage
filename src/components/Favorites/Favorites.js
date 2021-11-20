@@ -3,9 +3,7 @@ import ico from "../../assects/favicon.ico"
 import del from "../../assects/del.png"
 import './Favorites.scss'
 
-/**
- * 
- */
+
 function InfoGeter(props) {
     let [url, setUrl] = useState("");
     let [name, setName] = useState("");

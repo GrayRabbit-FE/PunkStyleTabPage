@@ -16,7 +16,7 @@
     #content-input:focus,
     #sbtn {
         border-radius: 2.5vmin 0 0 2.5vmin;
-        width: 50vw;
+        width: 30vw;
         height: 4vmin;
         margin-top: 5vw;
         background: rgba(96, 114, 103, 0.6);
@@ -24,11 +24,7 @@
         padding: 0;
         text-align: center;
         box-shadow: 0 0 5px #96e6a1, 0 0 7px #96e6a1, 0 0 15px #d4fc79;
-    }
-    #sbtn {
-        border-radius: 0 2.5vmin 2.5vmin 0;
-        width: 15vmin;
-        color: #96e6a1;
+        transition: 0.3s ease-in;
     }
     #content-input::placeholder,
     #sbtn,
@@ -41,6 +37,21 @@
         font-size: 2.5vmin;
         min-height: 30px;
         appearance: none;
+    }
+    #content-input:hover,
+    #content-input:focus {
+        width: 50vw;
+    }
+    @media all and (orientation: portrait) {
+        #content-input,
+        #content-input:focus {
+            width: 50vw;
+        }
+    }
+    #sbtn {
+        border-radius: 0 2.5vmin 2.5vmin 0;
+        width: 15vmin;
+        color: #96e6a1;
     }
     #foot {
         position: absolute;
