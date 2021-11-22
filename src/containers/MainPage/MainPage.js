@@ -12,10 +12,10 @@ function MainPage() {
   let [seeColor, setSeeColor] = useState(true);
   const ref = useRef();
   function handleInput(event) {
+    setSc(event.target.value);
     if(event.nativeEvent.keyCode === 13){
       window.open("https://cn.bing.com/search?form=ANNTH1&q=" + sc);
     }
-    setSc(event.target.value);
   }
   function handleButton() {
     window.open("https://cn.bing.com/search?form=ANNTH1&q=" + sc);
