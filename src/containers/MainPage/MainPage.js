@@ -71,9 +71,9 @@ function MainPage() {
           <button hidden={seeColor}
             onClick={() => {
               color[0] = "#d7d2cc";
-              localStorage.clear("bg-color1");
+              localStorage.removeItem("bg-color1");
               color[1] = "#304352";
-              localStorage.clear("bg-color2");
+              localStorage.removeItem("bg-color2");
               setColor(color);
             }}>恢复默认</button>
           <b>改变主题色</b>
