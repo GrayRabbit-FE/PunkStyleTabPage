@@ -93,7 +93,7 @@ function MainPage() {
       </div>
       <Favorites></Favorites>
       <div id="foot">
-        GrayRabbit@HIT
+        GrayRabbit@HIT&nbsp;&nbsp;&nbsp;<a href="http://beian.miit.gov.cn/" target="_blank">鲁ICP备2021043239号</a>
       </div>
     </div>
   );
